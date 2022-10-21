@@ -1,9 +1,9 @@
 # your code goes here
 
 class  Person
+    attr_accessor :hygiene, :happiness, :bank_account 
     attr_reader :name
-    attr_accessor :hygiene, :happiness 
-    attr_writer :bank_account 
+    
     def initialize(name,balance =25, happy = 8, hygiene = 8)
         @name = name
         @balance = balance
@@ -22,9 +22,7 @@ class  Person
     @happiness = 0  
     else
     @happiness = happy
-    end
-  
-    
+    end 
     end
 
 
@@ -76,11 +74,11 @@ class  Person
     end
 
     def start_conversation(friend,topic)
-  if topic == "politics"
+    
+    if topic == "politics"
      self.happiness-=(2)
      friend.happiness -=2
     return "blah blah partisan blah lobbyist"
-
     elsif topic == "weather"
         self.happiness += (1)
         friend.happiness += (1)
@@ -88,7 +86,9 @@ class  Person
     else
     return "blah blah blah blah blah"
     end
+    
     end
+
 
 
 end
